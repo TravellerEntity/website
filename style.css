@@ -143,6 +143,11 @@ body {
   background-color: #181818;
   border-radius: 10px;
   overflow: hidden;
+  transition: all 0.2s;
+}
+.flex-projects-item:hover {
+  box-shadow: 0 0 15px #9effe2;
+  transition: all 0.2s;
 }
 .flex-project-image-container {
   height: 50%;

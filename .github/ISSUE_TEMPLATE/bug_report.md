@@ -2,16 +2,16 @@
 name: Bug report
 about: Report a problem
 title: ''
-labels: ''
-assignees: ''
+labels: bug
+assignees: TravellerEntity
 
 ---
 
-## Expected Behavior
+**Expected Behavior**
 
-## Actual Behavior
+**Actual Behavior**
 
-## Steps to Reproduce the Problem
+**Steps to Reproduce**
 
   1.
   1.

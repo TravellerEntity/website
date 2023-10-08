@@ -1,9 +1,19 @@
 const OWM_API_KEY = "edb242698957a35b1f39f68c33c417ad";
+const numBackgrounds = 6;
 var ampm;
 var temperature;
 var locationName;
 var lat;
 var lon;
+function setRandomBackground() {
+  var backgroundContainer = document.getElementById("background-container");
+  var random = Math.floor(Math.random() * (numBackgrounds - 1 + 1)) + 1;
+  var imagePath = "res/" + random + ".jpg";
+  var imageToAdd = document.createElement("img");
+  imageToAdd.setAttribute("src", imagePath);
+  imageToAdd.setAttribute("id", "background");
+  backgroundContainer.appendChild(imageToAdd);
+}
 function constructRequestUrl() {
   var url =
     "https://api.openweathermap.org/data/2.5/weather?lat=" +
@@ -30,7 +40,7 @@ async function setWeather(position) {
   const weatherData = await res.json();
   temperature = Math.floor(weatherData["main"]["temp"]);
   locationName = weatherData["name"];
-  var weatherString = temperature+"°F in "+locationName;
+  var weatherString = temperature + "°F in " + locationName;
   var weatherTemp = document.getElementById("weather-temp");
   weatherTemp.innerText = weatherString;
 }
@@ -65,6 +75,7 @@ function updateTime() {
   timeHeader.innerText = formatTime(hour, minute);
   amPmIndicator.innerText = ampm;
 }
+setRandomBackground();
 updateTime();
 updateWeather();
 setInterval(updateTime, 1000);

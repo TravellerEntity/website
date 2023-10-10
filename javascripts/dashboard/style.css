@@ -29,8 +29,8 @@ body {
   bottom: 0;
   left: 0;
   z-index: 1;
-  margin: 5vmin;
-  text-shadow: 0 0 3px black;
+  margin: 10vmin;
+  text-shadow: 0 0 40px black;
 }
 #time-header {
   color: white;
@@ -46,11 +46,14 @@ body {
   font-size: 10vmin;
 }
 #weather-icon {
-  margin: 0;
-  margin-right: 0.3em;
+  width: 0.7em;
+  height: 0.7em;
+  filter: invert(100%);
+  box-shadow: 40px solid black;
 }
 #weather-temp {
-  margin: 0px;
+  margin: 0;
+  margin-left: 0.2em;
 }
 #background {
   height: 100vmax;

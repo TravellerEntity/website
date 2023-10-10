@@ -3,6 +3,7 @@ const numBackgrounds = 6;
 var ampm;
 var temperature;
 var locationName;
+var icon;
 var lat;
 var lon;
 function setRandomBackground() {
@@ -34,23 +35,23 @@ function updateWeather() {
 async function setWeather(position) {
   lat = position.coords.latitude;
   lon = position.coords.longitude;
-  const reqUrl = constructRequestUrl();
-  const req = new Request(reqUrl);
+  const weatherTemp = document.getElementById("weather-temp");
+  const weatherIcon = document.getElementById("weather-icon");
+  const req = new Request(constructRequestUrl());
   const res = await fetch(req);
   const weatherData = await res.json();
   temperature = Math.floor(weatherData["main"]["temp"]);
+  icon = weatherData["weather"][0]["icon"];
   locationName = weatherData["name"];
-  var weatherString = temperature + "°F in " + locationName;
-  var weatherTemp = document.getElementById("weather-temp");
+  var weatherString = temperature + "°F - " + locationName;
   weatherTemp.innerText = weatherString;
+  weatherIcon.setAttribute("data", "res/" + icon + ".svg");
 }
 function showErrorIcon() {
   var weatherIcon = document.getElementById("weather-icon");
   var weatherTemp = document.getElementById("weather-temp");
   weatherTemp.innerText = "No location";
-  weatherIcon.className = "";
-  weatherIcon.classList.add("fa-solid");
-  weatherIcon.classList.add("fa-question");
+  weatherIcon.setAttribute("data", "res/circle-xmark.svg");
 }
 function formatTime(hour, minute) {
   var time;

@@ -4,21 +4,97 @@ body {
   user-select: none;
   overflow-x: hidden;
 }
-.link {
-  color: white;
+html {
+  font-size: 5vmin;
 }
 #main-container {
-  display: grid;
   width: 100vw;
+  height: 100vh;
   position: absolute;
   left: 0px;
   top: 0px;
-  grid-template-columns: 100vw;
-  grid-template-rows: 100vh 50px;
   overflow: hidden;
 }
+#dialog {
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 20px;
+  box-shadow: 0 0 10px black;
+}
+#dialog-content {
+  width: 100%;
+  height: 100%;
+}
+.dialog-header {
+  font-size: 1em;
+}
+.dialog-subheader {
+  font-size: 0.6em;
+  margin-top: 0.5em;
+}
+.dialog-selector {
+  font-size: 0.6em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.dialog-checkbox {
+  height: 1em;
+  width: 1em;
+  border: 2px solid black;
+}
+#options-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 10px;
+  transition: 0.2s all;
+  > * {
+    filter: invert(1);
+  }
+}
+#options-button:hover {
+  transition: 0.2s all;
+  > * {
+    filter: invert(0);
+  }
+}
+#close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 10px;
+  transition: 0.2s all;
+}
+#close-button:hover {
+  background-color: black;
+  transition: 0.2s all;
+  > * {
+    filter: invert(1);
+  }
+}
+.button-icon {
+  height: 0.7rem;
+  transition: 0.2s all;
+  pointer-events: none;
+}
 #background-container {
-  overflow: auto;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -34,21 +110,22 @@ body {
 }
 #time-header {
   color: white;
-  font-size: 25vmin;
+  font-size: 5em;
   margin: 0px;
 }
 #ampm-indicator {
-  font-size: 8vmin;
+  font-size: 2em;
 }
 #weather-text {
   color: white;
   margin: 0;
-  font-size: 10vmin;
+  font-size: 2em;
+  display: block;
 }
 #weather-icon {
   width: 0.7em;
   height: 0.7em;
-  filter: invert(100%);
+  filter: invert(1) drop-shadow(0 0 40px black);
   box-shadow: 40px solid black;
 }
 #weather-temp {
@@ -63,23 +140,4 @@ body {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 0;
-  animation: fadeIn 3s;
-  animation-fill-mode: forwards;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#footer {
-  background-color: #101010;
-  z-index: 0;
-}
-#footer-text {
-  text-align: center;
-  color: white;
-  font-family: sans-serif;
 }

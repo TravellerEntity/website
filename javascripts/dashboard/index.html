@@ -7,24 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <script src="https://kit.fontawesome.com/854b321a1b.js" crossorigin="anonymous"></script>
-    <div id="main-container">
-      <div id="background-container">
-        <div id="main-text-container">
-          <span id="time-header"></span>
-          <span id="ampm-indicator"></span>
-          <div id="weather-text">
-            <object data="res/globe.svg" id="weather-icon" type="image/svg+xml"></object><span id="weather-temp">Loading</span>
-          </div>
+    <dialog id="dialog">
+      <div id="dialog-content">
+        <span class="dialog-header">Options</span>
+        <button id="close-button">
+          <object data="res/circle-xmark.svg" class="button-icon" type="image/svg+xml"></object>
+        </button>
+        <div>
+          <span class="dialog-subheader">Backgrounds</span>
+          <select id="background-selector" class="dialog-selector" onchange="setSelectedBackground()">
+            <option value="1">Background 1</option>
+            <option value="2">Background 2</option>
+            <option value="3">Background 3</option>
+            <option value="4">Background 4</option>
+            <option value="5">Background 5</option>
+            <option value="6">Background 6</option>
+          </select>
+        </div>
+        <div>
+          <span class="dialog-subheader">Display weather</span>
+          <select id="weather-disp-selector" class="dialog-selector" onchange="setWeatherDisplay()">
+            <option value="show">Enabled</option>
+            <option value="hide">Disabled</option>
+          </select>
         </div>
       </div>
-      <div id="footer">
-        <p id="footer-text">
-          Made with <span class="fa-solid fa-heart"></span> by
-          <a href="https://www.travellerentity.xyz" class="link">TravellerEntity</a>. Data from OpenWeatherMap.
-        </p>
+    </dialog>
+    <div id="main-container">
+      <div id="background-container">
+        <!--To be filled with Javascript-->
       </div>
+      <div id="main-text-container">
+        <span id="time-header"></span>
+        <span id="ampm-indicator"></span>
+        <div id="weather-text">
+          <object data="res/globe.svg" id="weather-icon" type="image/svg+xml"></object
+          ><span id="weather-temp">Loading</span>
+        </div>
+      </div>
+      <button id="options-button">
+        <object data="res/gear.svg" class="button-icon" type="image/svg+xml"></object>
+      </button>
     </div>
-    <script src="./script.js"></script>
   </body>
+  <script src="script.js"></script>
 </html>

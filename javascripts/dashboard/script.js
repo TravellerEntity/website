@@ -8,12 +8,35 @@ var lat;
 var lon;
 function setRandomBackground() {
   var backgroundContainer = document.getElementById("background-container");
+  var backgroundSelector = document.getElementById("background-selector");
   var random = Math.floor(Math.random() * (numBackgrounds - 1 + 1)) + 1;
   var imagePath = "res/" + random + ".jpg";
   var imageToAdd = document.createElement("img");
   imageToAdd.setAttribute("src", imagePath);
   imageToAdd.setAttribute("id", "background");
   backgroundContainer.appendChild(imageToAdd);
+  backgroundSelector.value = random;
+}
+function setSelectedBackground() {
+  var backgroundContainer = document.getElementById("background-container");
+  backgroundContainer.innerHTML = "";
+  var backgroundSelector = document.getElementById("background-selector");
+  var value = backgroundSelector.value;
+  var imagePath = "res/" + value + ".jpg";
+  var imageToAdd = document.createElement("img");
+  imageToAdd.setAttribute("src", imagePath);
+  imageToAdd.setAttribute("id", "background");
+  backgroundContainer.appendChild(imageToAdd);
+}
+function setWeatherDisplay() {
+  var weatherText = document.getElementById("weather-text");
+  var weatherSelector = document.getElementById("weather-disp-selector");
+  var value = weatherSelector.value;
+  if(value == "hide") {
+    weatherText.style.display = "none";
+  } else {
+    weatherText.style.display = "block";
+  }
 }
 function constructRequestUrl() {
   var url =
@@ -76,6 +99,16 @@ function updateTime() {
   timeHeader.innerText = formatTime(hour, minute);
   amPmIndicator.innerText = ampm;
 }
+function showDialog() {
+  var dialog = document.getElementById("dialog");
+  dialog.showModal();
+}
+function hideDialog() {
+  var dialog = document.getElementById("dialog");
+  dialog.close();
+}
+document.getElementById("options-button").addEventListener("click", showDialog);
+document.getElementById("close-button").addEventListener("click", hideDialog);
 setRandomBackground();
 updateTime();
 updateWeather();

@@ -31,6 +31,13 @@
             <option value="hide">Disabled</option>
           </select>
         </div>
+        <div>
+          <span class="dialog-subheader">Debug</span>
+          <button id="dialog-selector" onclick="updateWeather()">Reload weather</button>
+        </div>
+        <div>
+          <p class="dialog-subheader">Backgrounds from Unsplash. Icons by FontAwesome. Designed and built by TravellerEntity</p>
+        </div>
       </div>
     </dialog>
     <div id="main-container">
@@ -38,8 +45,17 @@
         <!--To be filled with Javascript-->
       </div>
       <div id="main-text-container">
-        <span id="time-header">--:--</span>
-        <span id="ampm-indicator">am</span>
+        <div id="time-main-container">
+          <div id="time-container">
+            <span id="time-header">--:--</span>
+          </div>
+          <div id="seconds-container">
+            <span id="seconds-indicator">--</span>
+          </div>
+          <div id="ampm-container">
+            <span id="ampm-indicator">am</span>
+          </div>
+        </div>
         <div id="weather-text">
           <object data="res/globe.svg" id="weather-icon" type="image/svg+xml"></object
           ><span id="weather-temp">Loading</span>

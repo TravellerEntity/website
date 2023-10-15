@@ -91,14 +91,23 @@ function formatTime(hour, minute) {
   time = hour + ":" + minute;
   return time;
 }
+function formatSeconds(second) {
+  if (second < 10) {
+    second = "0" + second;
+  }
+  return second;
+}
 function updateTime() {
   var timeHeader = document.getElementById("time-header");
   var amPmIndicator = document.getElementById("ampm-indicator");
+  var secondsIndicator = document.getElementById("seconds-indicator");
   var date = new Date();
   var hour = date.getHours();
   var minute = date.getMinutes();
+  var second = date.getSeconds();
   timeHeader.innerText = formatTime(hour, minute);
   amPmIndicator.innerText = ampm;
+  secondsIndicator.innerText = formatSeconds(second);
 }
 function showDialog() {
   var dialog = document.getElementById("dialog");

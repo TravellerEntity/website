@@ -108,16 +108,46 @@ html {
   margin: 10vmin;
   text-shadow: 0 0 40px black;
 }
+#time-main-container {
+  display: grid;
+  width: fit-content;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: auto 0.5em auto;
+}
+#time-container {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
 #time-header {
-  color: white;
   font-size: 5em;
-  margin: 0px;
+}
+#seconds-container {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  position: relative;
+}
+#seconds-indicator {
+  font-size: 2em;
+  position: absolute;
+  bottom: 0;
+  display: block;
+}
+#ampm-container {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  position: relative;
 }
 #ampm-indicator {
   font-size: 2em;
+  display: block;
 }
 #weather-text {
-  color: white;
   margin: 0;
   font-size: 2em;
   display: block;

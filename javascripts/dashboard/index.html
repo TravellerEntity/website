@@ -25,7 +25,7 @@
           </select>
         </div>
         <div>
-          <span class="dialog-subheader">Display weather</span>
+          <span class="dialog-subheader">Weather</span>
           <select id="weather-disp-selector" class="dialog-selector" onchange="setWeatherDisplay()">
             <option value="show">Enabled</option>
             <option value="hide">Disabled</option>
@@ -38,8 +38,8 @@
         <!--To be filled with Javascript-->
       </div>
       <div id="main-text-container">
-        <span id="time-header"></span>
-        <span id="ampm-indicator"></span>
+        <span id="time-header">--:--</span>
+        <span id="ampm-indicator">am</span>
         <div id="weather-text">
           <object data="res/globe.svg" id="weather-icon" type="image/svg+xml"></object
           ><span id="weather-temp">Loading</span>

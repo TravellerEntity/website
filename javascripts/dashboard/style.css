@@ -115,7 +115,7 @@ html {
   display: grid;
   width: fit-content;
   grid-template-rows: 50% 50%;
-  grid-template-columns: auto 0.5em auto;
+  grid-template-columns: auto 0.5em 3em;
 }
 #time-container {
   grid-row-start: 1;
@@ -137,7 +137,6 @@ html {
   font-size: 2em;
   position: absolute;
   bottom: 0;
-  display: block;
 }
 #ampm-container {
   grid-row-start: 2;
@@ -148,7 +147,8 @@ html {
 }
 #ampm-indicator {
   font-size: 2em;
-  display: block;
+  position: absolute;
+  top: 0;
 }
 #weather-text {
   margin: 0;

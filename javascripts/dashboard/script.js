@@ -38,6 +38,26 @@ function setWeatherDisplay() {
     weatherText.style.display = "block";
   }
 }
+function setSecondsDisplay() {
+  var secondsIndicator = document.getElementById("seconds-indicator");
+  var secondsSelector = document.getElementById("seconds-disp-selector");
+  var value = secondsSelector.value;
+  if(value == "hide") {
+    secondsIndicator.style.display = "none";
+  } else {
+    secondsIndicator.style.display = "block";
+  }
+}
+function setAmPmDisplay() {
+  var amPmIndicator = document.getElementById("ampm-indicator"); 
+  var amPmSelector = document.getElementById("ampm-disp-selector");
+  var value = amPmSelector.value;
+  if(value == "hide") {
+    amPmIndicator.style.display = "none";
+  } else {
+    amPmIndicator.style.display = "block";
+  }
+}
 function constructRequestUrl() {
   var url =
     "https://api.openweathermap.org/data/2.5/weather?lat=" +

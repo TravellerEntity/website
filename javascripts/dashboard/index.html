@@ -32,6 +32,20 @@
           </select>
         </div>
         <div>
+          <span class="dialog-subheader">Seconds</span>
+          <select id="seconds-disp-selector" class="dialog-selector" onchange="setSecondsDisplay()">
+            <option value="show">Enabled</option>
+            <option value="hide">Disabled</option>
+          </select>
+        </div>
+        <div>
+          <span class="dialog-subheader">AM/PM</span>
+          <select id="ampm-disp-selector" class="dialog-selector" onchange="setAmPmDisplay()">
+            <option value="show">Enabled</option>
+            <option value="hide">Disabled</option>
+          </select>
+        </div>
+        <div>
           <span class="dialog-subheader">Debug</span>
           <button id="dialog-selector" onclick="updateWeather()">Reload weather</button>
         </div>

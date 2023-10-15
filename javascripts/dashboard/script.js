@@ -71,9 +71,9 @@ function constructRequestUrl() {
 function updateWeather() {
   if (navigator.geolocation) {
     var options = {enableHighAccuracy: false};
-    navigator.geolocation.getCurrentPosition(setWeather, showErrorIcon("Location error"), options);
+    navigator.geolocation.getCurrentPosition(setWeather, showErrorIcon, options);
   } else {
-    showErrorIcon("Location unavailable");
+    showErrorIcon();
   }
 }
 async function setWeather(position) {
@@ -91,10 +91,10 @@ async function setWeather(position) {
   weatherTemp.innerText = weatherString;
   weatherIcon.setAttribute("data", "res/" + icon + ".svg");
 }
-function showErrorIcon(msg) {
+function showErrorIcon() {
   var weatherIcon = document.getElementById("weather-icon");
   var weatherTemp = document.getElementById("weather-temp");
-  weatherTemp.innerText = msg;
+  weatherTemp.innerText = "Location error";
   weatherIcon.setAttribute("data", "res/circle-xmark.svg");
 }
 function formatTime(hour, minute) {

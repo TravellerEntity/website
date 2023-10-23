@@ -1,10 +1,12 @@
 @font-face {
   font-family: "Ostrich Sans";
   src: url("fonts/OstrichSans/OstrichSans-Medium.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Source Code Pro";
   src: url("fonts/SourceCodePro/SourceCodePro-Regular.ttf");
+  font-display: swap;
 }
 body {
   background-color: #151d26;

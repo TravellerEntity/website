@@ -28,10 +28,13 @@ html {
   display: inline-block;
   font-style: italic;
 }
-h1 {
+#header {
   display: inline-block;
   font-family: "Ostrich Sans", sans-serif;
   color: #9effe2;
   letter-spacing: 3px;
   font-size: 64px;
+}
+#title-container {
+  margin-bottom: 10px;
 }

@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Ostrich Sans";
   src: url("OstrichSans-Medium.otf");
+  font-display: swap;
 }
 html {
   font-family: "Roboto", sans-serif;
@@ -34,6 +35,7 @@ html {
   color: #9effe2;
   letter-spacing: 3px;
   font-size: 64px;
+  font-weight: bold;
 }
 #title-container {
   margin-bottom: 10px;

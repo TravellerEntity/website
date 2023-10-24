@@ -1,4 +1,5 @@
 const OWM_API_KEY = "edb242698957a35b1f39f68c33c417ad";
+const imageFormat = "webp";
 const numBackgrounds = 6;
 var ampm;
 var temperature;
@@ -10,7 +11,7 @@ function setRandomBackground() {
   var backgroundContainer = document.getElementById("background-container");
   var backgroundSelector = document.getElementById("background-selector");
   var random = Math.floor(Math.random() * (numBackgrounds - 1 + 1)) + 1;
-  var imagePath = "res/" + random + ".jpg";
+  var imagePath = "res/" + random + "." + imageFormat;
   var imageToAdd = document.createElement("img");
   imageToAdd.setAttribute("src", imagePath);
   imageToAdd.setAttribute("id", "background");
@@ -22,7 +23,7 @@ function setSelectedBackground() {
   backgroundContainer.innerHTML = "";
   var backgroundSelector = document.getElementById("background-selector");
   var value = backgroundSelector.value;
-  var imagePath = "res/" + value + ".jpg";
+  var imagePath = "res/" + value + "." + imageFormat;
   var imageToAdd = document.createElement("img");
   imageToAdd.setAttribute("src", imagePath);
   imageToAdd.setAttribute("id", "background");

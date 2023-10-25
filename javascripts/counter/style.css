@@ -22,7 +22,7 @@ html {
   grid-template-rows: 100%;
   grid-template-columns: 1fr 2rem;
   width: 100%;
-  height: 75%;
+  height: 100%;
   background-color: #24364a;
   position: relative;
   top: 50%;
@@ -39,9 +39,6 @@ html {
     height: 3rem;
     width: 3rem;
   }
-  #reset-container {
-    background-color: #151d26;
-  }
 }
 #number-container {
   position: relative;
@@ -54,6 +51,7 @@ html {
 }
 #reset-container {
   position: relative;
+  background-color: #151d26;
 }
 #reset-button {
   height: 1rem;
@@ -76,4 +74,11 @@ html {
 #reset-icon {
   width: 100%;
   height: 100%;
+}
+#canvas {
+  left: 0;
+  top: 0;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
 }

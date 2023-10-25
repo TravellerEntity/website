@@ -1,10 +1,13 @@
 let counter = 0;
 document.getElementById("counter").innerText = counter;
+
 function resetCounter(e) {
   e.preventDefault();
   e.stopImmediatePropagation();
-  counter = 0;
-  document.getElementById("counter").innerText = counter;
+  if(e.button === 0) {
+    counter = 0;
+    document.getElementById("counter").innerText = counter;
+  }
 }
 
 function checkInput(e) {
@@ -14,7 +17,7 @@ function checkInput(e) {
   if (e.code === "Space") {
     counter++;
     document.getElementById("counter").innerText = counter;
-  } 
+  }
   if (e.button === 0) {
     counter++;
     document.getElementById("counter").innerText = counter;
@@ -22,7 +25,5 @@ function checkInput(e) {
 }
 
 document.addEventListener("keydown", checkInput);
-document.addEventListener("mousedown", checkInput);
-document.getElementById("reset-button").addEventListener("click", resetCounter);
-
-
+document.getElementById("number-container").addEventListener("mousedown", checkInput);
+document.getElementById("reset-button").addEventListener("mousedown", resetCounter);

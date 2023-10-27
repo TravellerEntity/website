@@ -1,39 +1,47 @@
 const OWM_API_KEY = "edb242698957a35b1f39f68c33c417ad";
+//API key for OpenWeatherMap (free version)
 const imageFormat = "webp";
-const numBackgrounds = 6;
+//Change this if background images are converted for
+//some reason
+const numBackgrounds = 6; 
+//Change this if more backgrounds are added, otherwise
+//the random background selector will not work properly
+
 var ampm;
 var temperature;
 var locationName;
 var icon;
 var lat;
 var lon;
+
+function constructBackgroundElement(num) {
+  if (typeof(num) === "number" && num > 0 && num <= numBackgrounds) {
+    var backgroundContainer = document.getElementById("background-container");
+    backgroundContainer.innerHTML="";
+    var imagePath = "res/" + num + "." + imageFormat;
+    var imageToAdd = document.createElement("img");
+    imageToAdd.setAttribute("src", imagePath);
+    imageToAdd.setAttribute("id", "background");
+    backgroundContainer.appendChild(imageToAdd);
+  }
+}
 function setRandomBackground() {
-  var backgroundContainer = document.getElementById("background-container");
   var backgroundSelector = document.getElementById("background-selector");
   var random = Math.floor(Math.random() * (numBackgrounds - 1 + 1)) + 1;
-  var imagePath = "res/" + random + "." + imageFormat;
-  var imageToAdd = document.createElement("img");
-  imageToAdd.setAttribute("src", imagePath);
-  imageToAdd.setAttribute("id", "background");
-  backgroundContainer.appendChild(imageToAdd);
+  constructBackgroundElement(random);
   backgroundSelector.value = random;
 }
 function setSelectedBackground() {
-  var backgroundContainer = document.getElementById("background-container");
-  backgroundContainer.innerHTML = "";
   var backgroundSelector = document.getElementById("background-selector");
   var value = backgroundSelector.value;
-  var imagePath = "res/" + value + "." + imageFormat;
-  var imageToAdd = document.createElement("img");
-  imageToAdd.setAttribute("src", imagePath);
-  imageToAdd.setAttribute("id", "background");
-  backgroundContainer.appendChild(imageToAdd);
+  constructBackgroundElement(value);
+  backgroundSelector.value = value;
 }
 function setWeatherDisplay() {
   var weatherText = document.getElementById("weather-text");
   var weatherSelector = document.getElementById("weather-disp-selector");
   var value = weatherSelector.value;
-  if(value == "hide") {
+  if (value == "hide") {
     weatherText.style.display = "none";
   } else {
     weatherText.style.display = "block";
@@ -43,17 +51,17 @@ function setSecondsDisplay() {
   var secondsIndicator = document.getElementById("seconds-indicator");
   var secondsSelector = document.getElementById("seconds-disp-selector");
   var value = secondsSelector.value;
-  if(value == "hide") {
+  if (value == "hide") {
     secondsIndicator.style.display = "none";
   } else {
     secondsIndicator.style.display = "block";
   }
 }
 function setAmPmDisplay() {
-  var amPmIndicator = document.getElementById("ampm-indicator"); 
+  var amPmIndicator = document.getElementById("ampm-indicator");
   var amPmSelector = document.getElementById("ampm-disp-selector");
   var value = amPmSelector.value;
-  if(value == "hide") {
+  if (value == "hide") {
     amPmIndicator.style.display = "none";
   } else {
     amPmIndicator.style.display = "block";
@@ -71,8 +79,12 @@ function constructRequestUrl() {
 }
 function updateWeather() {
   if (navigator.geolocation) {
-    var options = {enableHighAccuracy: false};
-    navigator.geolocation.getCurrentPosition(setWeather, showErrorIcon, options);
+    var options = { enableHighAccuracy: false };
+    navigator.geolocation.getCurrentPosition(
+      setWeather,
+      showErrorIcon,
+      options
+    );
   } else {
     showErrorIcon();
   }

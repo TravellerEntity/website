@@ -1,4 +1,4 @@
-const CLICK_DETECTOR_ID = "number-container";
+const CANVAS_PARENT_ID = "number-container";
 
 const gravity = 0.8;
 const timeToLive = 100;
@@ -13,7 +13,7 @@ const rectHeight = 8;
 
 function updateCanvasPosition() {
   const canvas = document.getElementById("canvas");
-  const canvasContainer = document.getElementById(CLICK_DETECTOR_ID);
+  const canvasContainer = document.getElementById(CANVAS_PARENT_ID);
   var canvasWidth = canvasContainer.getBoundingClientRect().width;
   var canvasHeight = canvasContainer.getBoundingClientRect().height;
   var canvasX = canvasContainer.getBoundingClientRect().x;
@@ -89,6 +89,4 @@ function loop() {
 }
 loop();
 
-document
-  .getElementById(CLICK_DETECTOR_ID)
-  .addEventListener("click", addParticles);
+document.getElementById(CANVAS_PARENT_ID).addEventListener("click", addParticles);

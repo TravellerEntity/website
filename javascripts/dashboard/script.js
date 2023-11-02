@@ -15,10 +15,11 @@ var lat;
 var lon;
 
 function constructBackgroundElement(num) {
-  if (typeof(num) === "number" && num > 0 && num <= numBackgrounds) {
+  var convertedNum = parseInt(num);
+  if (typeof convertedNum == "number" && convertedNum > 0 && convertedNum <= numBackgrounds) {
     var backgroundContainer = document.getElementById("background-container");
     backgroundContainer.innerHTML="";
-    var imagePath = "res/" + num + "." + imageFormat;
+    var imagePath = "res/" + convertedNum + "." + imageFormat;
     var imageToAdd = document.createElement("img");
     imageToAdd.setAttribute("src", imagePath);
     imageToAdd.setAttribute("id", "background");

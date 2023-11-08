@@ -1,0 +1,1 @@
+document.getElementById("menu-button").onclick=function(){alert(window.location)};

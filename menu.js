@@ -50,9 +50,14 @@ const style = `
 }
 @keyframes animateOut {
   0% {
-    border-width: 0;
+    border: 0;
+  }
+  50% {
+    margin: 0;
   }
   100% {
+    margin: 0;
+    border: 0;
     bottom: 50%;
     right: 50%;
     width: 110vw;
@@ -89,5 +94,5 @@ document.head.insertAdjacentHTML("beforeend", `<style>${style}</style>`);
 document.body.insertAdjacentHTML("beforeend", button);
 document.getElementById("menu-button").addEventListener("click", function () {
   animate();
-  setTimeout(function(){window.location.href = "/";}, animationDuration);
+  setTimeout(function(){window.location.href = "/"}, animationDuration);
 });

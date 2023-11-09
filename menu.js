@@ -49,15 +49,13 @@ const style = `
   scale: 1.05;
 }
 @keyframes animateOut {
-  0% {
-    border: 0;
-  }
-  50% {
+  20% {
     margin: 0;
+    border: 2px solid #151d26;
   }
   100% {
+    border: 2px solid #151d26;
     margin: 0;
-    border: 0;
     bottom: 50%;
     right: 50%;
     width: 110vw;
@@ -66,9 +64,13 @@ const style = `
   }
 }
 @keyframes animateIcon {
-  to {
+  70% {
+    opacity: 1;
+  }
+  100% {
     height: 270px;
     width: 260px;
+    opacity: 0;
   }
 }
 @keyframes animatePath {

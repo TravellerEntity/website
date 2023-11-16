@@ -216,51 +216,6 @@ body {
     width: calc(100% - 44px);
   }
 }
-#loading-avatar {
-  position: fixed;
-  width: 260px;
-  height: 270px;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-@keyframes pathTrace {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-#avatar-path {
-  stroke-dasharray: 1100;
-  stroke-dashoffset: 1100;
-  animation: pathTrace 1.5s ease-in-out forwards;
-}
-@keyframes fadeOut {
-  0% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
-#loading {
-  animation: 1s 1.5s fadeOut;
-  animation-fill-mode: forwards;
-  background-color: #151d26;
-  margin: 0;
-  padding: 0;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
 #strip {
   z-index: -1;
   position: absolute;

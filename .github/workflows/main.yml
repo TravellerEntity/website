@@ -1,4 +1,6 @@
 on: push
+  branches:
+    - main
 name: FTP Deploy on push
 jobs:
   web-deploy:

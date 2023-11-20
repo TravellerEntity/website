@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }} | travellerentity.xyz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="me" href="https://mastodon.social/@travellerentity" />
+  </head>
+
+  <body>
+    <script
+      src="https://kit.fontawesome.com/854b321a1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <div id="strip"></div>
+    <div id="main-container">
+      <div id="flex-main-content">
+        <div id="blog-header-container">
+          <a href="/blog" class="link-no-decoration">
+            <span class="blog-back-button">
+              <span class="fa-solid fa-arrow-left"></span>
+            </span>
+          </a>
+          <h1 class="blog-header">Blog</h1>
+        </div>
+        <div id="flex-main-content-body">
+          <span class="fa-solid fa-calendar-days"></span
+          ><span class="card-info-label">{{ dateText }}</span>
+          <p id="flex-main-content-text">
+            {{ content | safe }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <dialog id="dialog">
+      <div id="dialog-content">
+        <span class="dialog-header">Options</span>
+        <button id="close-button">
+          <object data="res/circle-xmark.svg" class="button-icon" type="image/svg+xml"></object>
+        </button>
+        <div>
+          <span class="dialog-subheader">Backgrounds</span>
+          <select id="background-selector" class="dialog-selector" onchange="setSelectedBackground()">
+            <option value="1">Background 1</option>
+            <option value="2">Background 2</option>
+            <option value="3">Background 3</option>
+            <option value="4">Background 4</option>
+            <option value="5">Background 5</option>
+            <option value="6">Background 6</option>
+          </select>
+        </div>
+        <div>
+          <span class="dialog-subheader">Weather</span>
+          <select id="weather-disp-selector" class="dialog-selector" onchange="setWeatherDisplay()">
+            <option value="show">Enabled</option>
+            <option value="hide">Disabled</option>
+          </select>
+        </div>
+        <div>
+          <span class="dialog-subheader">Seconds</span>
+          <select id="seconds-disp-selector" class="dialog-selector" onchange="setSecondsDisplay()">
+            <option value="show">Enabled</option>
+            <option value="hide">Disabled</option>
+          </select>
+        </div>
+        <div>
+          <span class="dialog-subheader">AM/PM</span>
+          <select id="ampm-disp-selector" class="dialog-selector" onchange="setAmPmDisplay()">
+            <option value="show">Enabled</option>
+            <option value="hide">Disabled</option>
+          </select>
+        </div>
+        <div>
+          <p class="dialog-subheader">Backgrounds from Unsplash. Icons by FontAwesome. Weather by OpenWeatherMap.</p>
+          <p class="dialog-subheader">Designed and programmed by <a href="https://www.travellerentity.xyz">TravellerEntity</a>, 2023.</p>
+        </div>
+      </div>
+    </dialog>
+    <div id="main-container">
+      <div id="background-container">
+        <!--To be filled with Javascript-->
+      </div>
+      <div id="main-text-container">
+        <div id="time-main-container">
+          <div id="time-container">
+            <span id="time-header">--:--</span>
+          </div>
+          <div id="seconds-container">
+            <span id="seconds-indicator">--</span>
+          </div>
+          <div id="ampm-container">
+            <span id="ampm-indicator">am</span>
+          </div>
+        </div>
+        <div id="weather-text">
+          <object data="res/globe.svg" id="weather-icon" type="image/svg+xml"></object
+          ><span id="weather-temp">Loading weather</span>
+        </div>
+      </div>
+      <button id="options-button">
+        <object data="res/gear.svg" class="button-icon" type="image/svg+xml"></object>
+      </button>
+    </div>
+    <script src="script.js"></script>
+    <script src="/menu.js"></script>
+  </body>
+</html>

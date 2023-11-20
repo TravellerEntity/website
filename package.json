@@ -1,0 +1,18 @@
+{
+  "name": "travellerentity-xyz",
+  "version": "1.0.0",
+  "description": "Files for my personal website. Contains: - Social links - Information about me - Various programming projects",
+  "main": "menu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1"
+  }
+}

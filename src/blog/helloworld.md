@@ -1,11 +1,13 @@
 ---
 title: Hello World
 layout: post
+tags: post
 dateText: Nov 11, 2023
-date: 2023-11-20
+description: A test of my shiny new static site generator
 ---
 # Hello World
 Lorem ipsum dolor sit amet
+
 ```
 # A wild codeblock appears
 for i in range(5):

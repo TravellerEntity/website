@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ title }} | travellerentity.xyz</title>
+    <title>Blog | travellerentity.xyz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="me" href="https://mastodon.social/@travellerentity" />
@@ -17,7 +17,7 @@
     <div id="main-container">
       <div id="flex-main-content">
         <div id="blog-header-container">
-          <a href="/blog" class="link-no-decoration">
+          <a href="/" class="link-no-decoration">
             <span class="blog-back-button">
               <span class="fa-solid fa-arrow-left"></span>
             </span>
@@ -25,11 +25,17 @@
           <h1 class="blog-header">Blog</h1>
         </div>
         <div id="flex-main-content-body">
-          <span class="fa-solid fa-calendar-days"></span
-          ><span class="card-info-label">{{ dateText }}</span>
-          <p id="flex-main-content-text">
-            {{ content | safe }}
-          </p>
+          <span class="fa-solid fa-book"></span
+          ><span class="card-info-label">Recent posts</span>
+        </div>
+          <div id="flex-projects"><a href="/blog/helloworld/" class="link-no-decoration">
+              <div class="flex-projects-item">
+                <div class="flex-project-text-container">
+                  <p class="flex-project-text-heading">Hello World</p>
+                  <p class="flex-project-text">A test of my shiny new static site generator</p>
+                </div>
+              </div>
+            </a></div>
         </div>
       </div>
     </div>

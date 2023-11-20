@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>TravellerEntity</title>
+    <title>{{ title }} | travellerentity.xyz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="me" href="https://mastodon.social/@travellerentity" />
@@ -122,110 +122,20 @@
         </div>
       </div>
       <div id="flex-main-content">
-        <h1 class="color-h1">Projects</h1>
+        <div id="blog-header-container">
+          <a href="/blog" class="link-no-decoration">
+            <span class="blog-back-button">
+              <span class="fa-solid fa-arrow-left"></span>
+            </span>
+          </a>
+          <h1 class="blog-header">Blog</h1>
+        </div>
         <div id="flex-main-content-body">
           <span class="fa-solid fa-calendar-days"></span
-          ><span class="card-info-label">Nov 16, 2023</span>
+          ><span class="card-info-label">{{ dateText }}</span>
           <p id="flex-main-content-text">
-            I'm sure you've noticed that I've removed some animations while I
-            try to implement a better animation library. CSS animations are so
-            incredibly janky for my intended purpose. I apologize that your eyes
-            have to witness my homepage in its current state.
+            {{ content | safe }}
           </p>
-        </div>
-        <div id="flex-projects">
-          <a
-            href="https://github.com/TravellerEntity/travellerentity-xyz"
-            class="link-no-decoration"
-          >
-            <div class="flex-projects-item">
-              <div class="flex-project-image-container">
-                <img src="assets/webp/github.webp" class="flex-project-image" />
-              </div>
-              <div class="flex-project-text-container">
-                <p class="flex-project-text-heading">Source code</p>
-                <p class="flex-project-text">
-                  This site is on GitHub! Take a look right here.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/javascripts/todolist" class="link-no-decoration">
-            <div class="flex-projects-item">
-              <div class="flex-project-image-container">
-                <img
-                  src="assets/webp/todolist.webp"
-                  class="flex-project-image"
-                />
-              </div>
-              <div class="flex-project-text-container">
-                <p class="flex-project-text-heading">To-Do List</p>
-                <p class="flex-project-text">
-                  My first JS project! A simple to-do list.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/javascripts/dashboard" class="link-no-decoration">
-            <div class="flex-projects-item">
-              <div class="flex-project-image-container">
-                <img
-                  src="assets/webp/dashboard.webp"
-                  class="flex-project-image"
-                />
-              </div>
-              <div class="flex-project-text-container">
-                <p class="flex-project-text-heading">Weather Dashboard</p>
-                <p class="flex-project-text">
-                  Shows time and weather info. Good for large screens!
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/javascripts/counter" class="link-no-decoration">
-            <div class="flex-projects-item">
-              <div class="flex-project-image-container">
-                <img
-                  src="assets/webp/counter.webp"
-                  class="flex-project-image"
-                />
-              </div>
-              <div class="flex-project-text-container">
-                <p class="flex-project-text-heading">Counter</p>
-                <p class="flex-project-text">
-                  Count things with Space or a click.
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="/blog" class="link-no-decoration">
-            <div class="flex-projects-item">
-              <div class="flex-project-image-container">
-                <img
-                  src="assets/corgi_banner.png"
-                  class="flex-project-image"
-                />
-              </div>
-              <div class="flex-project-text-container">
-                <p class="flex-project-text-heading">Blog</p>
-                <p class="flex-project-text">
-                  Get the latest updates from me here!
-                </p>
-              </div>
-            </div>
-          </a>
-          <div class="flex-projects-item">
-            <div class="flex-project-image-container">
-              <img
-                src="assets/webp/placeholder.webp"
-                class="flex-project-image"
-              />
-            </div>
-            <div class="flex-project-text-container">
-              <p class="flex-project-text-heading">Coming soon</p>
-              <p class="flex-project-text">More projects coming soon!</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

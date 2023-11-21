@@ -1,7 +1,5 @@
 ---
 title: Hello World
-layout: post
-tags: post
 dateText: Nov 11, 2023
 description: A test of my shiny new static site generator
 ---

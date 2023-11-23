@@ -1,8 +1,13 @@
-# travellerentity.xyz
+# TravellerEntity/website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8d83bd7c-006a-47db-bb8b-32148b663d87/deploy-status)](https://app.netlify.com/sites/travellerentity/deploys)
+
 Files for my personal website.
 Contains:
 - Social links
 - Information about me
 - Various programming projects
 
-All the source code and assets are stored here and periodically updated. Go to [travellerentity.xyz](https://www.travellerentity.xyz) to view the latest changes.
+All source code and assets are stored here. Go to [entity.codes](https://entity.codes) to view the latest changes.
+
+Alternatively, visit one of the following mirrors:
+- [travellerentity.xyz](https://travellerentity.xyz)

@@ -32,13 +32,21 @@
             {%- for post in collections.post -%}
             <a href="{{ post.url }}" class="link-no-decoration">
               <div class="flex-projects-item">
+                {%- if post.data.thumbnail -%}
+                <div class="flex-project-image-container">
+                  <img
+                    src="{{ post.data.thumbnail }}"
+                    class="flex-project-image"
+                  />
+                </div>
+                {%- endif -%}
                 <div class="flex-project-text-container">
                   <p class="flex-project-text-heading">{{ post.data.title }}</p>
                   <p class="flex-project-text">
                     {%- if post.data.description -%}
                       {{ post.data.description }}
                     {%- else -%}
-                      (No description given)
+                      <i>No description</i>
                     {%- endif -%}
                   </p>
                 </div>

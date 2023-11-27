@@ -1,18 +1,16 @@
 {
-  "name": "travellerentity-xyz",
+  "name": "entity.codes",
   "version": "1.0.0",
-  "description": "Files for my personal website. Contains: - Social links - Information about me - Various programming projects",
-  "main": "menu.js",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["eleventy", "11ty", "html", "css", "javascript", "blog"],
+  "author": "TravellerEntity",
+  "license": "CC-BY-NC-4.0",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
-  },
-  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1"
   }
 }

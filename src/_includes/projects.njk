@@ -1,0 +1,21 @@
+{%- for item in collections.homeitem -%}
+    <a href="{{ item.url }}" class="link-no-decoration">
+        <div class="flex-projects-item">
+        {%- if item.data.thumbnail -%}
+        <div class="flex-project-image-container">
+            <img src="{{ item.data.thumbnail }}" class="flex-project-image" />
+        </div>
+        {%- endif -%}
+        <div class="flex-project-text-container">
+            <p class="flex-project-text-heading">{{ item.data.title }}</p>
+            <p class="flex-project-text">
+            {%- if item.data.description -%}
+                {{ item.data.description }}
+            {%- else -%}
+                <i>No description</i>
+            {%- endif -%}
+            </p>
+        </div>
+    </div>
+</a>
+{%- endfor -%}

@@ -23,4 +23,3 @@ jobs:
         password: ${{ secrets.ftp_password }}
         port: 21
         protocol: ftp
-        dry-run: true

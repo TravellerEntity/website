@@ -2,6 +2,7 @@ const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 module.exports = function(eleventyConfig) {
   //Always include src/ before file paths!
   eleventyConfig.addPassthroughCopy("src/assets/**");
+  eleventyConfig.addPassthroughCopy("src/admin/**");
   eleventyConfig.addPassthroughCopy("src/projects/demos/**");
   eleventyConfig.addPassthroughCopy("src/fonts/**");
   eleventyConfig.addPassthroughCopy("src/projects/**");

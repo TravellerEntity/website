@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: netlifycms
+media_folder: "/src/assets/uploads"
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "/src/blog/post" # The path to the folder where the documents are stored
+    media_folder: "/src/assets/uploads"
+    public_folder: "/assets/uploads"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "dateText", widget: "string"}
+      - label: "Thumbnail"
+        name: "thumbnail" 
+        widget: "image"
+        allow_multiple: false
+      - {label: "Body", name: "body", widget: "markdown"}

@@ -1,0 +1,176 @@
+body {
+  color: white;
+  font-family: sans-serif;
+  user-select: none;
+  overflow-x: hidden;
+}
+html {
+  font-size: 5vmin;
+}
+#main-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+#dialog {
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 20px;
+  box-shadow: 0 0 10px black;
+}
+#dialog::backdrop {
+  backdrop-filter: blur(2px);
+}
+#dialog-content {
+  width: 100%;
+  height: 100%;
+}
+.dialog-header {
+  font-size: 1em;
+}
+.dialog-subheader {
+  font-size: 0.6em;
+  margin-top: 0.5em;
+}
+.dialog-selector {
+  font-size: 0.6em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.dialog-checkbox {
+  height: 1em;
+  width: 1em;
+  border: 2px solid black;
+}
+#options-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 10px;
+  transition: 0.2s all;
+  > * {
+    filter: invert(1);
+  }
+}
+#options-button:hover {
+  transition: 0.2s all;
+  > * {
+    filter: invert(0);
+  }
+}
+#close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 10px;
+  transition: 0.2s all;
+}
+#close-button:hover {
+  background-color: black;
+  transition: 0.2s all;
+  > * {
+    filter: invert(1);
+  }
+}
+.button-icon {
+  height: 0.7rem;
+  transition: 0.2s all;
+  pointer-events: none;
+}
+#background-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#main-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: 10vmin;
+  text-shadow: 0 0 40px black;
+}
+#time-main-container {
+  display: grid;
+  width: fit-content;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: auto 0.5em 3em;
+}
+#time-container {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#time-header {
+  font-size: 5em;
+}
+#seconds-container {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  position: relative;
+}
+#seconds-indicator {
+  font-size: 2em;
+  position: absolute;
+  bottom: 0;
+}
+#ampm-container {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  position: relative;
+}
+#ampm-indicator {
+  font-size: 2em;
+  position: absolute;
+  top: 0;
+}
+#weather-text {
+  margin: 0;
+  font-size: 2em;
+  display: block;
+}
+#weather-icon {
+  width: 0.7em;
+  height: 0.7em;
+  filter: invert(1) drop-shadow(0 0 40px black);
+  box-shadow: 40px solid black;
+}
+#weather-temp {
+  margin: 0;
+  margin-left: 0.2em;
+}
+#background {
+  height: 100vmax;
+  width: auto;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+}

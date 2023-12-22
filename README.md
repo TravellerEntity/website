@@ -1,6 +1,5 @@
 # TravellerEntity/website
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8d83bd7c-006a-47db-bb8b-32148b663d87/deploy-status)](https://app.netlify.com/sites/travellerentity/deploys)
-[![FTP Deploy](https://github.com/TravellerEntity/website/actions/workflows/main.yml/badge.svg)](https://github.com/TravellerEntity/website/actions/workflows/main.yml)
 
 Files for my personal website.
 Contains:

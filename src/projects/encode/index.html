@@ -1,0 +1,30 @@
+---
+tags: homeitem
+title: JonasCode
+description: Simple substitution cipher
+thumbnail: /assets/webp/encoder.webp
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JonasCode Tools</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h1>JonasCode Encoder</h1>
+
+    <p>Input</p>
+    <textarea id="input" class="textarea"></textarea>
+    <p>Output</p>
+    <div id="output" class="textarea"></div>
+    
+    <div id="buttons-container">
+      <button id="copy" onclick="copyOutput()" disabled>Copy</button>
+    </div>
+    
+    <script src="./encode.js"></script>
+    <script src="/menu.js"></script>
+  </body>
+</html>

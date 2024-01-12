@@ -44,7 +44,7 @@ function disableCopy() {
 }
 
 function encode() {
-    var input = Array.from(inputarea.value);
+    var input = Array.from(inputarea.value.toLowerCase());
     var output = "";
     for (var i=0; i<input.length; i++) {
         if (input[i] in charmap) {

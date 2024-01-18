@@ -6,7 +6,7 @@ thumbnail: /assets/uploads/gnomes.png
 ---
 *`I'll preface this whole story with the usual disclaimers. No hate to anyone mentioned (they're just doing their job), school owns the computers and can do what they want, no school principals or IT guys were harmed in the making of this blog post, yada yada. You get the picture. With that out of the way, like so many students before me, let me tell you why...`*
 
-## Web filters suck
+# Web filters suck
 
 ...and I hate everything they do, and the geniuses who decided to force them on my district of thousands of students! Yes, I know CIPA exists, and I know the woefully underfunded American school system is basically forced to comply if they want to continue receiving certain benefits from the government. BUT, there's still no reason why the filtering solutions they choose have to go out of their way to get so... *in the way* of a normal web browsing experience! In fact, the most annoying part of this is that nothing would be wrong if schools actually used their filters properly! So let me back up for a second and explain, to the best of my ability, my problem with Securly and its web-filtering brethren.
 

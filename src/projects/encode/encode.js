@@ -31,16 +31,16 @@ const jonasmap = {
     " ": 99
 };
 const jackmap = {
-    "a": 1107,
-    "b": 19,
-    "c": 18,
-    "d": 17,
-    "e": 16,
-    "f": 15,
-    "g": 14,
-    "h": 13,
-    "i": 12,
-    "j": 11,
+    "a": 110,
+    "b": 190,
+    "c": 180,
+    "d": 170,
+    "e": 160,
+    "f": 150,
+    "g": 140,
+    "h": 130,
+    "i": 120,
+    "j": 100,
     "k": 201,
     "l": 210,
     "m": 209,
@@ -51,22 +51,31 @@ const jackmap = {
     "r": 204,
     "s": 203,
     "t": 202,
-    "u": 3001,
-    "v": 3100,
-    "w": 3099,
-    "x": 3089,
-    "y": 3079,
-    "z": 111,
-    ".": 4000,
-    "?": 3999,
-    "!": 5000,
-    " ": 42
+    "u": 301,
+    "v": 310,
+    "w": 399,
+    "x": 389,
+    "y": 379,
+    "z": 211,
+    ".": 400,
+    "?": 398,
+    "!": 500,
+    " ": 420
 };
 var currentMode = "jonas";
+var currentDir = "encode";
 
 var inputarea = document.getElementById("input");
 var outputarea = document.getElementById("output");
 var copyButton = document.getElementById("copy");
+
+function swap(arr) {
+    ret = {};
+    for (var key in arr) {
+        ret[arr[key]] = key;
+    }
+    return ret;
+}
 
 function disableCopy() {
     if(inputarea.value == "") {
@@ -76,26 +85,50 @@ function disableCopy() {
     }
 }
 
-function switchEncode() {
+function displayHeader() {
     header = document.querySelector("h1");
-    if (currentMode == "jonas") {
-        currentMode = "jack";
-        header.innerText = "JackCode Encoder";
-    } else {
-        currentMode = "jonas";
-        header.innerText = "JonasCode Encoder"
-    }
-    encode();
+    modeText = currentMode == "jonas" ? "JonasCode" : "JackCode";
+    dirText = currentDir == "encode" ? "Encoder" : "Decoder";
+    header.innerText = modeText + " " + dirText;
+}
+function switchEncode() {
+    inputarea.value = ""
+    outputarea.value = ""
+    currentMode = currentMode == "jonas" ? "jack" : "jonas";
+    displayHeader();
+    main();
+}
+function switchDir() {
+    inputarea.value = ""
+    outputarea.value = ""
+    currentDir = currentDir == "encode" ? "decode" : "encode";
+    displayHeader();
+    main();
 }
 
-function encode() {
-    var input = Array.from(inputarea.value.toLowerCase());
+function main() {
     var output = "";
     var charMap = "jonas" == currentMode ? jonasmap : jackmap;
-    for (var i=0; i<input.length; i++) {
-        if (input[i] in charMap) {
-            var character = charMap[input[i]].toString();
-            output += character;
+    if (currentDir == "encode") {
+        var input = Array.from(inputarea.value.toLowerCase());
+        for (var i=0; i<input.length; i++) {
+            if (input[i] in charMap) {
+                var character = charMap[input[i]].toString();
+                output += character;
+            }
+        }
+    } else {
+        var input = inputarea.value;
+        var index = 0;
+        var length = currentMode == "jonas" ? 2 : 3;
+        while (index < input.length) {
+            var character = input.substring(index, index+length);
+            for (i in charMap) {
+                if (charMap[i] == character) {
+                    output += i;
+                }
+            }
+            index += length;
         }
     }
     outputarea.innerText = output;
@@ -105,8 +138,11 @@ function encode() {
 function copyOutput() {
     navigator.clipboard.writeText(outputarea.innerText)
     .then(() => {
-        alert("Copied to clipboard");
+        copyButton.innerText = "Copied!";
+        setTimeout(function() {
+            copyButton.innerText = "Copy";
+        }, 750);
     });
 }
 
-inputarea.addEventListener("input", encode);
+inputarea.addEventListener("input", main);

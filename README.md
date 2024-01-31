@@ -11,25 +11,3 @@ All source code and assets are stored here. Go to [entity.codes](https://entity.
 
 Alternatively, visit one of the following mirrors:
 - [travellerentity.xyz](https://travellerentity.xyz)
-
-# Creating New Pages
-## To show in "Projects" on the homepage:
-
-In the front matter of a `.njk` or `.html` file anywhere in `/src`, add these tags. `thumbnail` can be omitted if
-an image thumbnail is unnecessary.
-```
-tags: homeitem
-title: TITLE_HERE
-description: DESC_HERE
-thumbnail: /path/to/image.png
-```
-## To show in blog:
-
-In the front matter of a `.md` file in `/src/blog/post`, add these tags. `thumbnail` can be omitted
-if an image thumbnail is unnecessary.
-```
-title: TITLE_HERE
-dateText: MONTH DAY, YEAR
-description: DESC_HERE
-thumbnail: /path/to/image.png
-```

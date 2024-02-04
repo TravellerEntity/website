@@ -39,7 +39,7 @@ body {
   margin: 20px;
   min-width: 30%;
   height: auto;
-  background-color: #24364a;
+  background-color: #26434a;
   border-radius: 10px;
   border: 2px solid #9effe2;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -68,7 +68,7 @@ body {
   height: 100px;
   margin: 0;
   padding: 0;
-  background: linear-gradient(0deg, #24364a 0%, transparent 100%);
+  background: linear-gradient(0deg, #26434a 0%, transparent 100%);
 }
 #card-main-text {
   color: white;
@@ -121,7 +121,7 @@ body {
   overflow: hidden;
   margin: 20px;
   flex-grow: 1;
-  background-color: #24364a;
+  background-color: #26434a;
   border-radius: 10px;
   border: 2px solid #9effe2;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -260,5 +260,5 @@ body {
   left: 0;
   height: 50px;
   width: 100vw;
-  background-image: linear-gradient(90deg, #0a2737, #adcad0);
+  background-image: linear-gradient(90deg, #0a2737, #9effe2);
 }

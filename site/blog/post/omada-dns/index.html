@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Omada DNS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/blog/post/post.css" />
+    <link rel="me" href="https://mastodon.social/@travellerentity" />
+  </head>
+
+  <body>
+    <script
+      src="https://kit.fontawesome.com/854b321a1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <div id="strip"></div>
+    <div id="main-container">
+      <div id="flex-main-content">
+        <div id="blog-header-container">
+          <a href="/blog" class="link-no-decoration">
+            <span class="blog-back-button">
+              <span class="fa-solid fa-arrow-left"></span>
+            </span>
+          </a>
+          <h1 class="blog-header">Blog</h1>
+        </div>
+        <div id="flex-main-content-body">
+          <span class="fa-solid fa-calendar-days"></span
+          ><span class="card-info-label">Feb 13, 2024</span>
+          <p id="flex-main-content-text">
+            <p>After Insecurly got patched, the situation was truly dire at my school. Game sites were blocked. Sites for class were blocked. Even Github, for some reason, was blocked. But everything changed when the custom DNS nation attacked...</p>
+<p>Suddenly, we were free to go wherever and do whatever we want. It was pure freedom! And, if I'm being honest, this exploit was even better than Insecurly, mainly because it broke Hapara. For the first time, we could say goodbye to random screenshots and lost work from force-closed tabs! And now, you're in the right place to experience this newfound power.</p>
+<h2>Tutorial</h2>
+<p>There are two main paths you can go down here. One is useful if the network is managed and forced onto your Chromebook (like school WiFi), and the other, easier one is for personal, unmanaged networks (like your home WiFi). The best way to tell a managed network from unmanaged is to check if the network has a &quot;building&quot; icon next to it. If it does, it's managed. If you've used caub before (it's okay if you don't know what that is), your managed network might show as unmanaged. You should be able to follow the steps for personal networks. But when in doubt, or if you're blocked from changing DNS settings, go with the managed route.</p>
+<h3>For managed networks</h3>
+<p>Before you start, you need to get some information about your network. Here are the steps to follow:</p>
+<ol>
+<li>Go to chrome://network#state</li>
+<li>Scroll to <code>Favorite Networks</code> and find the managed network</li>
+<li>Click it to expand, and copy all the text that appears between the <code>{brackets}</code></li>
+<li>Go to the <a href="/projects/caubdns">DNS editor</a>
+<ul>
+<li>Disable <code>enable metered (update blocker)</code></li>
+<li>Enable <code>edit dns</code></li>
+<li>Type <code>167.86.91.171</code> into the first box, set the rest to <code>0.0.0.0</code></li>
+<li>In the small text box near the bottom, paste the block of text you copied earlier.</li>
+<li>Click <code>generate and download file</code></li>
+</ul>
+</li>
+<li>Go to chrome://network</li>
+<li>Scroll to the bottom and click <code>Choose File</code></li>
+<li>Choose the file that was downloaded earlier</li>
+<li>Restart your Chromebook</li>
+</ol>
+<h3>For unmanaged networks</h3>
+<p>You're lucky! These steps will be much easier for you because you won't be blocked from managing DNS settings.</p>
+<ol>
+<li>Go to Settings &gt; Wi-Fi &gt; [your network name]</li>
+<li>Expand the <code>Network</code> section</li>
+<li>Scroll to <code>Name servers</code></li>
+<li>Click on <code>Custom name servers</code> (if it's not already selected)</li>
+<li>Type <code>167.86.91.171</code> into the first box, set the rest to <code>0.0.0.0</code></li>
+<li>Restart your Chromebook</li>
+</ol>
+<p>After you follow these steps, web filters and Hapara should be broken as promised! Some sites may still be blocked by Chrome's URL blacklist or a filter built into school WiFi, but for the most part, it's like having Insecurly back again. Go enjoy the unblocked internet!</p>
+<p>Oh, and there's one last thing that you <strong>need</strong> to know, so <em>please</em> read this section too! The DNS server we're using might not last forever. It could be blocked by school administrators, your router at home, or the owners might just run out of money to keep it running. In that case, you may be cut off entirely from the internet, as your computer won't be able to reach the server to resolve domain names. If you suddenly can't reach any websites or experience any other problems, and you've tried other troubleshooting steps like restarting your computer, you can fix the problem by following the steps for unmanaged networks, up to the point where you click <code>Custom name servers</code>. Instead of that, click <code>Automatic name servers</code>, restart your Chromebook, and you should be able to reach the internet again. To get the exploit working again, just follow the steps for <strong>unmanaged</strong> networks. If your network was managed before, it won't appear that way after following this exploit, and you'll be able to activate and deactivate the exploit at will. For real this time, that's all you need to know.</p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="/menu.js"></script>
+  </body>
+</html>

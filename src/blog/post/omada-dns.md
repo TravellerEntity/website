@@ -1,12 +1,10 @@
 ---
 title: Omada DNS
-description: Break web filters and Hapara by changing DNS
+description: A broken exploit that used to bypass Securly
 dateText: Feb 13, 2024
 thumbnail: /assets/uploads/screenshot-2024-02-10-12.50.23-pm.png
 ---
-After Insecurly got patched, the situation was truly dire at my school. Game sites were blocked. Sites for class were blocked. Even Github, for some reason, was blocked. But everything changed when the custom DNS nation attacked...
-
-Suddenly, we were free to go wherever and do whatever we want. It was pure freedom! And, if I'm being honest, this exploit was even better than Insecurly, mainly because it broke Hapara. For the first time, we could say goodbye to random screenshots and lost work from force-closed tabs! And now, you're in the right place to experience this newfound power.
+*This is patched now, but I'm keeping it here for posterity's sake and in case it still works on your network. If your administrator blocked the Settings app or chrome://network, this will not work. For everyone else... you're welcome to try!*
 
 ## Tutorial
 
@@ -20,6 +18,7 @@ Before you start, you need to get some information about your network. Here are 
 2. Scroll to `Favorite Networks` and find the managed network
 3. Click it to expand, and copy all the text that appears between the `{brackets}`
 4. Go to the [DNS editor](/projects/caubdns)
+
    * Disable `enable metered (update blocker)`
    * Enable `edit dns`
    * Type `167.86.91.171` into the first box, set the rest to `0.0.0.0`
@@ -33,7 +32,8 @@ Before you start, you need to get some information about your network. Here are 
 ### For unmanaged networks
 
 You're lucky! These steps will be much easier for you because you won't be blocked from managing DNS settings.
-1. Go to Settings > Wi-Fi > [your network name]
+
+1. Go to Settings > Wi-Fi > \[your network name]
 2. Expand the `Network` section
 3. Scroll to `Name servers`
 4. Click on `Custom name servers` (if it's not already selected)

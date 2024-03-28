@@ -29,17 +29,23 @@
           <span class="fa-solid fa-calendar-days"></span
           ><span class="card-info-label">Feb 13, 2024</span>
           <p id="flex-main-content-text">
-            <p>After Insecurly got patched, the situation was truly dire at my school. Game sites were blocked. Sites for class were blocked. Even Github, for some reason, was blocked. But everything changed when the custom DNS nation attacked...</p>
-<p>Suddenly, we were free to go wherever and do whatever we want. It was pure freedom! And, if I'm being honest, this exploit was even better than Insecurly, mainly because it broke Hapara. For the first time, we could say goodbye to random screenshots and lost work from force-closed tabs! And now, you're in the right place to experience this newfound power.</p>
+            <p><em>This is patched now, but I'm keeping it here for posterity's sake and in case it still works on your network. If your administrator blocked the Settings app or chrome://network, this will not work. For everyone else... you're welcome to try!</em></p>
 <h2>Tutorial</h2>
 <p>There are two main paths you can go down here. One is useful if the network is managed and forced onto your Chromebook (like school WiFi), and the other, easier one is for personal, unmanaged networks (like your home WiFi). The best way to tell a managed network from unmanaged is to check if the network has a &quot;building&quot; icon next to it. If it does, it's managed. If you've used caub before (it's okay if you don't know what that is), your managed network might show as unmanaged. You should be able to follow the steps for personal networks. But when in doubt, or if you're blocked from changing DNS settings, go with the managed route.</p>
 <h3>For managed networks</h3>
 <p>Before you start, you need to get some information about your network. Here are the steps to follow:</p>
 <ol>
-<li>Go to chrome://network#state</li>
-<li>Scroll to <code>Favorite Networks</code> and find the managed network</li>
-<li>Click it to expand, and copy all the text that appears between the <code>{brackets}</code></li>
-<li>Go to the <a href="/projects/caubdns">DNS editor</a>
+<li>
+<p>Go to chrome://network#state</p>
+</li>
+<li>
+<p>Scroll to <code>Favorite Networks</code> and find the managed network</p>
+</li>
+<li>
+<p>Click it to expand, and copy all the text that appears between the <code>{brackets}</code></p>
+</li>
+<li>
+<p>Go to the <a href="/projects/caubdns">DNS editor</a></p>
 <ul>
 <li>Disable <code>enable metered (update blocker)</code></li>
 <li>Enable <code>edit dns</code></li>
@@ -48,10 +54,18 @@
 <li>Click <code>generate and download file</code></li>
 </ul>
 </li>
-<li>Go to chrome://network</li>
-<li>Scroll to the bottom and click <code>Choose File</code></li>
-<li>Choose the file that was downloaded earlier</li>
-<li>Restart your Chromebook</li>
+<li>
+<p>Go to chrome://network</p>
+</li>
+<li>
+<p>Scroll to the bottom and click <code>Choose File</code></p>
+</li>
+<li>
+<p>Choose the file that was downloaded earlier</p>
+</li>
+<li>
+<p>Restart your Chromebook</p>
+</li>
 </ol>
 <h3>For unmanaged networks</h3>
 <p>You're lucky! These steps will be much easier for you because you won't be blocked from managing DNS settings.</p>

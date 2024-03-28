@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Ostrich Sans";
+  src: url("/fonts/OstrichSans/OstrichSans-Black.otf");
+  font-display: swap;
+}
 body {
   color: white;
   font-family: sans-serif;
@@ -110,6 +115,7 @@ html {
   z-index: 1;
   margin: 10vmin;
   text-shadow: 0 0 40px black;
+  font-family: "Ostrich Sans";
 }
 #time-main-container {
   display: grid;
@@ -154,6 +160,10 @@ html {
   margin: 0;
   font-size: 2em;
   display: block;
+}
+#weather-sm-text {
+  margin: 0;
+  font-size: 0.75em;
 }
 #weather-icon {
   width: 0.7em;

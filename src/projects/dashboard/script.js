@@ -101,8 +101,8 @@ async function setWeather(position) {
   temperature = Math.floor(weatherData["main"]["temp"]);
   icon = weatherData["weather"][0]["icon"];
   locationName = weatherData["name"];
-  var weatherString = temperature + "°F - " + locationName;
-  weatherTemp.innerText = weatherString;
+  var weatherString = temperature + "<span id='weather-sm-text'>F (" + locationName + ")</span>";
+  weatherTemp.innerHTML = weatherString;
   weatherIcon.setAttribute("data", "res/" + icon + ".svg");
 }
 function showErrorIcon() {

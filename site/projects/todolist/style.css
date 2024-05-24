@@ -1,8 +1,13 @@
 #main-container {
   margin: 20px;
 }
+body {
+  background-color: #151d26;
+}
 .text-input {
   height: 30px;
+  color: white;
+  background-color: transparent;
   font-family: monospace;
   font-size: 25px;
   width: 100%;
@@ -23,6 +28,7 @@
   background-color: transparent;
   border: none;
   transition: 0.2s all;
+  filter: invert(1);
 }
 .toggle:hover {
   text-shadow: 0 0 15px black;
@@ -58,18 +64,19 @@
   align-items: center;
   height: 40px;
   margin: 5px;
-  border: 2px solid black;
+  border: 2px solid #9effe2;
   border-radius: 10px;
   font-family: monospace;
   font-size: 25px;
   user-select: none;
-  background-color: white;
+  background-color: #181818;
+  color: white;
   transition: all 0.2s;
 }
 .large-button:hover {
-  background-color: black;
-  color: white;
-  box-shadow: 0 0 15px black;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 15px #9effe2;
   transition: all 0.2s;
 }
 .button-icon {

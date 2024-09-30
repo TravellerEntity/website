@@ -4,7 +4,9 @@ description: A broken exploit that used to bypass Securly
 dateText: Feb 13, 2024
 thumbnail: /assets/uploads/screenshot-2024-02-10-12.50.23-pm.png
 ---
-*This is patched now, but I'm keeping it here for posterity's sake and in case it still works on your network. If your administrator blocked the Settings app or chrome://network, this will not work. For everyone else... you're welcome to try!*
+# **DISCLAIMER**
+
+**This is for educational purposes only. It is very unlikely to work anymore if your admin is even slightly competent. If you try this anyway, I will not offer help if it doesn't work or breaks your network connection. I did not make these directions, only edited them for clarity, and they are not updated anymore.**
 
 ## Tutorial
 

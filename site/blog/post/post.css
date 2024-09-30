@@ -3,3 +3,8 @@
         width: 100%;
     }
 }
+@media screen {
+    img {
+        width: 50%;
+    }
+}

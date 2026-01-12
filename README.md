@@ -8,6 +8,3 @@ Contains:
 - Various programming projects
 
 All source code and assets are stored here. Go to [entity.zone](https://entity.zone) to view the latest changes.
-
-Alternatively, visit one of the following mirrors:
-- [entity.codes](https://entity.codes)
